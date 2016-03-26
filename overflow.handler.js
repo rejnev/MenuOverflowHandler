@@ -54,9 +54,7 @@
                 $addedLi.remove();
             }
         }
-		
-		return this;
-	};
+    };
 
     $.fn.overflowHandler = function (config) {
         config = $.extend({}, $.fn.overflowHandler.config, config);
@@ -65,11 +63,12 @@
             var obj = new overflowHandler($this, config);
             obj.init();
         });
+        return this;
     };
 
     $.fn.overflowHandler.config = {
         availableCount: 6,
-        overflowText: 'سایر',
+        overflowText: 'More',
         overflowHref: '#'
     }
 })(jQuery, window, document);
